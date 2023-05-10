@@ -34,8 +34,8 @@ const Timer = () => {
   }, []);
 
   return (
-    <div>
-      {minutes}
+    <div className="timer">
+      <h1>{minutes}</h1>
     </div>
   );
 }
