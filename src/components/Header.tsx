@@ -1,6 +1,7 @@
 import { useState, useContext } from 'react';
 import { ThemeContext } from '../App';
 import { Link } from 'react-router-dom';
+import "./Header.css";
 
 const Header = ({ toggleTheme }: any) => {
   const theme = useContext(ThemeContext);
@@ -8,10 +9,8 @@ const Header = ({ toggleTheme }: any) => {
   const [hasDarkMode, setHasDarkMode] = useState((theme === "light") ? false : true);
 
   return (
-    <div className="flex justify-between px-4 md:px-16 lg:px-32 py-1 border-b">
+    <div className={`header header-${theme}`}>
       <h1 className="font-medium text-3xl"><Link to="/">1440</Link></h1>
-
-      {theme}
 
       {hasDarkMode ?
         <svg className="w-8 hover:cursor-pointer" onClick={() => { setHasDarkMode(false); toggleTheme() }} fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">

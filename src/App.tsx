@@ -18,16 +18,15 @@ function App() {
   return (
     <BrowserRouter>
       <ThemeContext.Provider value={theme}>
-        <Header toggleTheme={toggleTheme} />
-        <div className={`container mx-auto ${theme}`}>
-
-          {theme}
-
-          <Routes>
-            <Route path="/" element={<Timer />} />
-            <Route path="/about" element={<About />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
+        <div className={`h-screen ${theme}`}>
+          <Header toggleTheme={toggleTheme} />
+          <div className="">
+            <Routes>
+              <Route path="/" element={<Timer />} />
+              <Route path="/about" element={<About />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </div>
         </div>
       </ThemeContext.Provider>
     </BrowserRouter>

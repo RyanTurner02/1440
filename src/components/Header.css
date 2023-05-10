@@ -1,0 +1,17 @@
+.header {
+  @apply flex justify-between px-4 md:px-16 lg:px-32 py-1;
+}
+
+.header-light {
+  @apply transition ease-in duration-100;
+
+  background-color: #6D5D6E;
+  color: #F4EEE0;
+}
+
+.header-dark {
+  @apply transition ease-in duration-100;
+
+  background-color: #393646;
+  color: #F4EEE0;
+}
