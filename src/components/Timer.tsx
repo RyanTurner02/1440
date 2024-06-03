@@ -25,7 +25,7 @@ const Timer = () => {
     let endTime: number = nextDate.getTime();
     let deltaTime: number = endTime - startTime;
     
-    setMinutes(Math.floor(deltaTime / 60000));
+    setMinutes(Math.ceil(deltaTime / 60000));
   };
 
   useEffect(() => {
