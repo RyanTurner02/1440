@@ -24,12 +24,10 @@ npm install
 
 ## Usage
 
-Follow these steps to use the web page:
-
-1. Run the web page:
+To run and use the web page:
 
 ```bash
 npm run start
 ```
 
-2. To toggle between light and dark mode, click on the sun or moon icon located at the top-right of the web page.
+To toggle between light and dark mode, click on the sun or moon icon located at the top-right of the web page.
