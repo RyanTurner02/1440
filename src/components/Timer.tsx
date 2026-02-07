@@ -21,9 +21,9 @@ const Timer = () => {
   const calculateTime = () => {
     updateDates();
 
-    let startTime: number = currentDate.getTime();
-    let endTime: number = nextDate.getTime();
-    let deltaTime: number = endTime - startTime;
+    const startTime: number = currentDate.getTime();
+    const endTime: number = nextDate.getTime();
+    const deltaTime: number = endTime - startTime;
     
     setMinutes(Math.ceil(deltaTime / 60000));
   };
