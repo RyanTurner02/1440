@@ -34,6 +34,10 @@ const Timer = () => {
     return () => clearInterval(interval);
   }, []);
 
+  useEffect(() => {
+    document.title = minutes ? `${minutes} | 1440` : "1440";
+  }, [minutes]);
+
   return (
     <div className="timer">
       <h1>{minutes}</h1>
