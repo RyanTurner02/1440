@@ -26,4 +26,4 @@ To run and use the web page:
 npm run start
 ```
 
-To toggle betwee light and dark mode, click on the sun/moon icon located at the top-right of the web page.
+To toggle between light and dark mode, click on the sun/moon icon located at the top-right of the web page.
