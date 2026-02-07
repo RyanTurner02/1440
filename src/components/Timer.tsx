@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import "./Timer.css";
 
 const Timer = () => {
-  const [minutes, setMinutes] = useState(0);
+  const [minutes, setMinutes] = useState<number | null>(null);
 
   let currentDate: Date;
   let nextDate: Date;
