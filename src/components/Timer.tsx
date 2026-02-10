@@ -1,8 +1,9 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./Timer.css";
 
 const Timer = () => {
   const [minutes, setMinutes] = useState<number | null>(null);
+  const initializing = useRef(true);
 
   let currentDate: Date;
   let nextDate: Date;
@@ -29,6 +30,11 @@ const Timer = () => {
   };
 
   useEffect(() => {
+    if (initializing.current) {
+      calculateTime();
+      initializing.current = false;
+    }
+
     const interval = setInterval(calculateTime, 1000);
     
     return () => clearInterval(interval);
