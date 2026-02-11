@@ -1,5 +1,5 @@
 import './App.css';
-import { useState, createContext } from 'react';
+import { useState, createContext, useEffect } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Header from './components/Header';
 import Timer from './components/Timer';
@@ -8,7 +8,11 @@ import NotFound from './pages/NotFound';
 export const ThemeContext = createContext("light");
 
 function App() {
-  const [theme, setTheme] = useState("light");
+  const [theme, setTheme] = useState(localStorage.getItem("theme") || "light");
+
+  useEffect(() => {
+    localStorage.setItem("theme", theme);
+  }, [theme]);
 
   const toggleTheme = () => {
     setTheme((theme === "light") ? "dark" : "light");
