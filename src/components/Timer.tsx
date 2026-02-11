@@ -3,7 +3,7 @@ import "./Timer.css";
 
 const Timer = () => {
   const [minutes, setMinutes] = useState<number | null>(null);
-  const initializing = useRef(true);
+  const initializing = useRef<boolean>(true);
 
   let currentDate: Date;
   let nextDate: Date;
